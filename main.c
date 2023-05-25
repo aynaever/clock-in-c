@@ -12,10 +12,11 @@ int	main(void)
 
 	gettimeofday(&tp, NULL);
 	readable_time = localtime(&tp.tv_sec);
-	printf("%s %s %d %d\n",
+	printf("%s %s %d %d:%d\n",
 			days[readable_time->tm_wday],
 			months[readable_time->tm_mon],
 			readable_time->tm_mday,
-			readable_time->tm_hour);
+			readable_time->tm_hour,
+			readable_time->tm_min);
 	return (0);
 }
