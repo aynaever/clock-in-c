@@ -24,6 +24,5 @@ int	main(void)
 			(readable_time->tm_hour > 12 ? "PM" : "AM"),
 			(readable_time->tm_gmtoff / 60 / 60),
 			(readable_time->tm_year + 1900));
-	printf("%s\n", asctime(readable_time));
 	return (0);
 }
