@@ -1,7 +1,16 @@
 #include	<stdio.h>
+#include	<stdlib.h>
+#include	<unistd.h>
 
 int	main(void)
 {
-	printf("Hello, World!");
+	size_t	size = 100;
+	char*	buf = malloc(size);
+
+	printf("Hello, World!\n");
+	fflush(stdout);
+	printf("list of files in \"%s\" :\n", getcwd(buf, 100));
+	free(buf);
+	system("ls");
 	return (0);
 }
