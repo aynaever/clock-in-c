@@ -12,6 +12,6 @@ int	main(void)
 	printf("list of files in \"%s\" :\n", getcwd(buf, 100));
 	free(buf);
 	system("ls");
-	printf("Process ID of this process is %d\n", getpid());
+	printf("Process ID of this process is %d\n", getppid());
 	return (0);
 }
